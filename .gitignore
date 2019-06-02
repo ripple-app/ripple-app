@@ -1,0 +1,7 @@
+node_modules
+package-lock.json
+.editorconfig
+src/admin
+src/config/db.json
+coverage/
+.vscode/

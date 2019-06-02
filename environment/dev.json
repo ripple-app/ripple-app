@@ -1,0 +1,13 @@
+{
+  "port": "",
+  "mongo": {
+    "username": "",
+    "password": "",
+    "host": "",
+    "port": "",
+    "dbname": "",
+    "options": {
+      // ...mongoose connect options
+    }
+  }
+}

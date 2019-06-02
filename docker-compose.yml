@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    container_name: ripple-app
+    image: ripple:0.0.1
+    working_dir: /usr/app
+    restart: "always"
+    volumes:
+      - .:/usr/app
+    build: .
+    environment: 
+      - NODE_ENV=dev
+    ports:
+      - "5000:5000"
+    links:
+      - mongo
+  mongo:
+    container_name: ripple-mongo
+    image: mongo
+    restart: "always"
+    volumes:
+      - ./data/db:/var/mongodb/data/db
+    ports:
+      - "27017:27017"
