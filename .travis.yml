@@ -1,0 +1,9 @@
+language: node_js
+dist: xenial
+sudo: false
+node_js:
+  - "12"
+  - "10"
+  - "8"
+  after_success:
+  - npm test
