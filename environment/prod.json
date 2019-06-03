@@ -7,7 +7,6 @@
     "port": "",
     "dbname": "",
     "options": {
-      // ...mongoose connect options
     }
   }
 }
