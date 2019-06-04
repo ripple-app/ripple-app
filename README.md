@@ -16,6 +16,13 @@ npm install
 npm start
 ```
 
+## Generate Token
+```
+POST host:post/instance application/json {id: 'token value', name: 'token alias', config: {}} // generate token
+
+GET host:post/instance // confirm tokens
+```
+
 ## Example
 ```
 node example/agent <-- data source
