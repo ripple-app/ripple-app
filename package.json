@@ -31,6 +31,7 @@
     "babel-eslint": "^10.0.1",
     "eslint": "^5.16.0",
     "eslint-plugin-flowtype": "^3.9.1",
+    "husky": "^2.3.0",
     "jest": "^24.8.0",
     "lint-staged": "^8.1.7",
     "mock-socket": "^8.0.5",
@@ -38,6 +39,42 @@
     "net": "^1.0.2",
     "sinon": "^7.3.2",
     "socket.io-client": "^2.2.0",
-    "supertest": "^4.0.2"
+    "supertest": "^4.0.2",
+    "validate-commit-msg": "^2.14.0"
+  },
+  "config": {
+    "types": [
+      "feat",
+      "fix",
+      "docs",
+      "style",
+      "refactor",
+      "perf",
+      "test",
+      "build",
+      "ci",
+      "chore",
+      "revert"
+    ],
+    "scope": {
+      "required": false,
+      "allowed": [
+        "*"
+      ],
+      "validate": false,
+      "multiple": false
+    },
+    "warnOnFail": false,
+    "maxSubjectLength": 100,
+    "subjectPattern": ".+",
+    "subjectPatternErrorMsg": "subject does not match subject pattern!",
+    "helpMessage": "Please confirm your commit message format.",
+    "autoFix": false
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "validate-commit-msg",
+      "pre-push": "npm test"
+    }
   }
 }
