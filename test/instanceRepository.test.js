@@ -9,6 +9,10 @@ describe('instance repository test', () => {
         repository = new InstanceRepository(Instance);
     });
 
+    afterEach(() => {
+        sinon.restore();
+    });
+
     test('repository correct generated', () => {
         expect(repository).toBeDefined();
     });
