@@ -3,6 +3,9 @@ const Server = require('../src/server');
 const sinon = require('sinon');
 
 describe('server', () => {
+    afterEach(() => {
+        sinon.restore();
+    });
     test('start', (done) => {
         const im = Server.__private__.im;
         const mock = sinon.mock(im);

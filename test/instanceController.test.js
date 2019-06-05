@@ -6,6 +6,10 @@ describe('instance controller', () => {
     const controller = require('../src/component/instance/instanceController');
     app.use('/instance', controller);
 
+    afterEach(() => {
+        sinon.restore();
+    });
+
     test('getInstnace', (done) => {
         const mock = sinon.mock(controller.__private__.im);
         mock.expects('getList').resolves([]);
